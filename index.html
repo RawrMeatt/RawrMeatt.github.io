@@ -3,13 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>ชื่อของคุณ | Portfolio 🪴</title>
+    
+    <style>
+        /* 1. Global Reset & Basic Typography */
+        body {
+            font-family: 'Arial', sans-serif; /* ฟอนต์ที่อ่านง่ายและเป็นกลาง */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* สีพื้นหลังโทนอ่อน */
+            color: #333; /* สีตัวอักษรสีเข้ม */
+        }
+        
+        a {
+            color: #007bff; /* สีลิงก์มาตรฐาน */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* 2. Layout & Container */
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden; /* ป้องกันการล้น */
+            padding: 20px 0;
+        }
+        
+        section {
+            padding: 60px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd; /* เส้นแบ่งเบาๆ ระหว่าง Section */
+        }
+
+        /* 3. Header & Navigation */
+        header {
+            background: #ffffff;
+            color: #333;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky; /* ทำให้ Header ติดอยู่ด้านบน */
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+        }
+
+        nav h1 a {
+            color: #333;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #555;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+        
+        /* 4. Hero Section */
+        .hero {
+            text-align: center;
+            background: #ffffff;
+            padding: 80px 0;
+            border-bottom: none;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+
+        .button {
+            display: inline-block;
+            background: #007bff;
+            color: #ffffff;
+            padding: 10px 25px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .button:hover {
+            background: #0056b3;
+        }
+
+        /* 5. Portfolio/Project Section */
+        .portfolio h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .project h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        /* 6. Contact Section */
+        .contact {
+            text-align: center;
+        }
+        
+        .contact form {
+            max-width: 500px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input[type="text"],
+        .contact input[type="email"],
+        .contact textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact textarea {
+            resize: vertical;
+        }
+
+        .contact button {
+            background: #28a745; /* สีปุ่มส่งข้อความที่ดูเป็นมิตร */
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .contact button:hover {
+            background: #1e7e34;
+        }
+
+        /* 7. Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #e9ecef;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <nav>
+        <nav class="container">
             <h1><a href="#home">Your Name</a></h1>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -20,58 +205,77 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Hello, I'm **[Your Name]**</h2>
-            <p>**[Your Profession/Title, e.g., Web Developer, Graphic Designer, Writer]**</p>
-            <a href="#portfolio" class="button">View My Work</a>
+        <div class="container">
+            <h2>สวัสดีครับ/ค่ะ, ผม/ดิฉัน **[ชื่อของคุณ]**</h2>
+            <p>**[ตำแหน่งของคุณ, เช่น Web Developer, Designer]** ผู้รักการสร้างสรรค์สิ่งที่สวยงามและใช้งานได้จริง</p>
+            <a href="#portfolio" class="button">ดูผลงานของฉัน</a>
         </div>
     </section>
 
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I'm passionate about **[Your main area of expertise]**. My background includes **[Mention key skills, years of experience, or a fun fact]**.</p>
-        
-        <div class="skills-list">
-            <h3>Key Skills</h3>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>[Skill 2]</li>
-                <li>[Skill 3]</li>
-            </ul>
+        <div class="container">
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>ผม/ดิฉันมีประสบการณ์ด้าน **[ระบุทักษะหลัก]** มาเป็นเวลา [จำนวน] ปี ผม/ดิฉันเชื่อในการทำงานที่เน้น **คุณภาพ** และ **ความเรียบง่าย**</p>
+            
+            <div class="skills-list">
+                <h3>ทักษะหลัก</h3>
+                <ul>
+                    <li>HTML & CSS (พื้นฐาน)</li>
+                    <li>[ทักษะ 2, เช่น JavaScript, Python]</li>
+                    <li>[ทักษะ 3, เช่น Figma, Photography]</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section id="portfolio" class="portfolio">
-        <h2>My Work</h2>
-        
-        <div class="project">
-            <h3>Project Title 1</h3>
-            <p>A brief description of the project, including the technologies used (e.g., HTML, CSS, JavaScript).</p>
-            <a href="[Link to Live Site]" target="_blank">View Live</a> | 
-            <a href="[Link to GitHub]" target="_blank">GitHub</a>
-        </div>
-        
-        <div class="project">
-            <h3>Project Title 2</h3>
-            <p>Another brief description of a different project.</p>
+        <div class="container">
+            <h2>ผลงานของฉัน</h2>
+            
+            <div class="project-grid">
+                <div class="project">
+                    <h3>Project 1: [ชื่อโครงการ]</h3>
+                    <p>โครงการนี้เป็นการใช้ [ระบุเทคโนโลยี] เพื่อแก้ปัญหา [ระบุปัญหา] โดยเน้นความเรียบง่ายของ UI/UX</p>
+                    <a href="[ลิงก์ Live Site]" target="_blank">ดู Live</a> | 
+                    <a href="[ลิงก์ GitHub]" target="_blank">GitHub</a>
+                </div>
+                
+                <div class="project">
+                    <h3>Project 2: [ชื่อโครงการ]</h3>
+                    <p>งานออกแบบ [ประเภทงาน] ที่เน้นโทนสีธรรมชาติและตัวอักษรที่อ่านง่าย</p>
+                    <a href="[ลิงก์ Live Site]" target="_blank">ดู Live</a> | 
+                    <a href="[ลิงก์ GitHub]" target="_blank">GitHub</a>
+                </div>
+                
+                <div class="project">
+                    <h3>Project 3: [ชื่อโครงการ]</h3>
+                    <p>เว็บไซต์/แอปพลิเคชัน ที่ถูกสร้างโดยใช้หลักการ [ระบุหลักการ] เพื่อให้ได้ผลลัพธ์ที่ [ระบุผลลัพธ์]</p>
+                    <a href="[ลิงก์ Live Site]" target="_blank">ดู Live</a> | 
+                    <a href="[ลิงก์ GitHub]" target="_blank">GitHub</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <p>I'm currently **[Your availability, e.g., looking for new opportunities, available for freelance work]**.</p>
-        <p>Email me at: **<a href="mailto:your.email@example.com">your.email@example.com</a>**</p>
-        
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="container">
+            <h2>ติดต่อฉัน</h2>
+            <p>ผม/ดิฉันพร้อมสำหรับโอกาสใหม่ๆ และยินดีรับฟังทุกข้อเสนอแนะ</p>
+            <p>ส่งอีเมลมาได้ที่: **<a href="mailto:your.email@example.com">your.email@example.com</a>**</p>
+            
+            <form>
+                <input type="text" placeholder="ชื่อของคุณ" required>
+                <input type="email" placeholder="อีเมลของคุณ" required>
+                <textarea placeholder="ข้อความของคุณ" rows="5" required></textarea>
+                <button type="submit">ส่งข้อความ</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Your Name. สงวนลิขสิทธิ์.</p>
+        </div>
     </footer>
 
 </body>
